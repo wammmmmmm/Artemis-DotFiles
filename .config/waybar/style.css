@@ -1,0 +1,93 @@
+@define-color black #000000;
+@define-color white #ffffff;
+@define-color blue #00869b;
+@define-color red #ff2700;
+@define-color yellow #fffd8c;
+@define-color green #a1ff2e;
+
+@define-color active @red;
+@define-color alert @yellow;
+@define-color warning @red;
+@define-color good @green;
+
+@define-color fallback-color @white;
+
+@define-color clock-color @red;
+@define-color custom-text-color @red;
+
+@define-color workspaces-active-color @red;
+@define-color workspaces-urgent-color @yellow;
+
+@define-color waybar-background @nothing;
+@define-color top-waybar-border-bottom-color @blue;
+@define-color top-waybar-border-top-color @blue;
+@define-color bottom-waybar-border-top-color @blue;
+@define-color bottom-waybar-border-bottom-color @blue;
+
+window#waybar.top {
+	background-color: @waybar-background;
+	color: @fallback-color;
+	border-bottom: 0px solid @top-waybar-border-bottom-color;
+	border-top: 0px solid @top-waybar-border-top-color;
+}
+
+window#waybar.bottom {
+        background-color: @waybar-background;
+        color: @fallback-color;
+	border-bottom: 0px solid @bottom-waybar-border-bottom-color;
+        border-top: 0px solid @bottom-waybar-border-top-color;
+}
+
+#workspaces button.active {
+	color: @workspaces-active-color;
+}
+
+#workspaces button.urgent {
+	color: @workspaces-urgent-color;
+}
+
+#custom-text {
+	font-size: 16px;
+	color: @custom-text-color;
+}
+
+#battery.warning:not(.charging) {
+	color: @alert;
+}
+
+#battery.critical:not(.charging) {
+	color: @warning;
+}
+
+#battery.charging {
+	color: @good;
+}
+
+#pulseaudio.muted {
+	color: @warning;
+
+}
+
+#pulseaudio.low:not(.muted) { 
+	color: @alert;
+}
+
+#pulseaudio.zero {
+        color: @warning;
+}
+
+#temperature.warning {
+	color: @alert;
+}
+
+#temperature.critical { 
+	color: @warning;
+}
+
+#bluetooth.off {
+	color: @warning;
+}
+
+#network.disconnected {
+	color: @warning;
+}

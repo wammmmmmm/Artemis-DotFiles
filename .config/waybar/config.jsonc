@@ -1,0 +1,348 @@
+[
+{
+/////////////////
+/////////////////
+//// GAY BAR ////
+/////////////////
+/////////////////
+
+////////////
+// FORMAT //
+////////////
+
+	"layer": "top",
+
+        "position": "top", // Waybar position (top|bottom|left|right)
+
+        "height": 25, // remove for automatic height
+
+        // "width": 1280,
+
+        "spacing": 25,
+
+	
+///////////
+// ORDER //
+///////////
+
+
+        "modules-left": [
+        	
+        ],
+
+        "modules-center": [
+                "bluetooth", "network", "clock", "custom/text",  "custom/weather", "temperature", "cpu",
+        ],
+
+        "modules-right": [
+                
+        ],
+
+
+/////////////
+// MODULES //
+/////////////
+
+
+"custom/text": {
+	"format": "[ AR73M1S ]",
+	"on-click": "exec firefox https://aaaaaaafif.neocities.org/",
+	},
+
+"custom/weather": {
+        "exec": "curl 'https://wttr.in/?format=1'",
+        "interval": 3600,
+        "format": "{}",
+        "tooltip": true
+	},
+
+"clock": {
+        "format": "{:%H:%M}  󰥔 ",
+        "format-alt": "{:%A, %B %d, %Y (%R)} ",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+                    "mode"          : "year",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-scroll-up": "tz_up",
+                    "on-scroll-down": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
+},
+
+"pulseaudio": {
+        "format": " {icon} {volume}%",
+        "states": {
+                "normal": 50,
+                "low": 25,
+                "zero": 0
+                },
+        "format-bluetooth": " {icon} {volume}%  󰂰 ",
+        "format-bluetooth-muted": " ░░░░░░░░░░ {volume}%  󰝟 ",
+        "format-muted": " ░░░░░░░░░░ {volume}%  󰝟 ",
+        "format-icons": {
+                "headphone": [" {icon} {volume}%  󰋋 "],
+                "default": ["░░░░░░░░░░",
+                         "█░░░░░░░░░",
+                         "██░░░░░░░░",
+                         "███░░░░░░░",
+                         "████░░░░░░",
+                         "█████░░░░░",
+                         "██████░░░░",
+                         "███████░░░",
+                         "████████░░",
+                         "█████████░",
+                         "██████████"],
+        },
+        "on-click": "kitty -e pulsemixer",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +2%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -2%"
+},
+
+"battery": {
+        "states": {
+                "good": 100,
+                "warning": 35,
+                "critical": 15
+                },
+        "format": "{capacity}% {icon} ",
+        "format-charging": " 󰚥 {capacity}% {icon} ",
+        "format-plugged": " 󰚥 {capacity}% {icon} ",
+        "format-alt": "{time} {icon} ",
+        "format-icons": ["░░░░░░░░░░",
+                         "░░░░░░░░░█",
+                         "░░░░░░░░██",
+                         "░░░░░░░███",
+                         "░░░░░░████",
+                         "░░░░░█████",
+                         "░░░░██████",
+                         "░░░███████",
+                         "░░████████",
+                         "░█████████",
+                         "██████████"]
+},
+
+"tray": {
+        "icon-size": 16,
+        "spacing": 11
+},
+
+"backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": ["󰃞 ", "󰃟 ", "󰃠 "],
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-"
+},
+
+"network": {
+        "format-wifi": "{signalStrength}%  󰖩 ",
+        "format-ethernet": "{ifname}  󰈀 ",
+        "format-linked": "{ifname} (No IP)  󰈀 ",
+        "format-disconnected": "off 󰖪 ",
+        "tooltip-format": "{ifname}: {ipaddr}",
+        "on-click": "kitty -e nmtui",
+	"on-click-right": "nmcli radio wifi | grep -q 'enabled' && nmcli radio wifi off || nmcli radio wifi on"
+
+},
+
+"bluetooth": {
+        "format": "  {status}  󰂯",
+        "format-off": "  {status}  󰂲 ",
+        "on-click": "kitty -e bluetui",
+        "on-click-right": "bluetoothctl show | grep -q 'Powered: yes' && bluetoothctl power off || bluetoothctl power on"
+},
+
+"temperature": {
+        "critical-threshold": 80,
+        "warning-threshold": 70,
+        "format": "{icon}  {temperatureC}°C",
+        "format-icons": ["󱃃", "󰔏", "󱃂"],
+        "on-click": "kitty -e btop"
+},
+
+"cpu": {
+        "format": "󰘚   {usage}%",
+        "tooltip": true,
+        "interval": 1,
+        "on-click": "kitty -e btop",
+},
+
+
+},
+
+{
+
+////////////////////
+////////////////////
+//// BAR NMBR  2////
+////////////////////
+////////////////////
+
+////////////
+// FORMAT //
+////////////
+
+
+	"layer": "top",
+	
+	"position": "bottom", // Waybar position (top|bottom|left|right)
+	
+	"height": 25, // remove for automatic height
+	
+	// "width": 1280,
+    
+	"spacing": 4,
+
+
+
+///////////    
+// ORDER //
+///////////
+
+   
+	"modules-left": [
+		"pulseaudio", "tray", 		 
+	], 
+
+	"modules-center": [
+		 "hyprland/workspaces",
+	],
+
+	"modules-right": [
+		"backlight", "battery",
+	],
+
+
+
+/////////////
+// MODULES //
+/////////////
+
+"tray": { 
+	"icon-size": 16,
+	"spacing": 11
+},
+
+"backlight": {
+        "format": "{percent}% {icon} ",
+        "format-icons": ["󰃞 ", "󰃟 ", "󰃠 "],
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-"
+},
+
+"network": {
+        "format-wifi": "󰖩  {signalStrength}%",
+        "format-ethernet": "󰈀 {ifname}",
+        "format-linked": " 󰈀  {ifname} (No IP)",
+        "format-disconnected": "󰖪 ",
+        "tooltip-format": "{ifname}: {ipaddr}",
+        "on-click": "kitty -e nmtui"
+},
+
+"bluetooth": {
+	"format": " 󰂯 {device_alias}",
+	"format-off": " 󰂲 ",
+	"on-click": "kitty -e bluetui",
+	"on-click-right": "bluetoothctl show | grep -q 'Powered: yes' && bluetoothctl power off || bluetoothctl power on"
+},
+
+"temperature": {
+	"critical-threshold": 80,
+	"warning-threshold": 70,
+	"format": "{temperatureC}°C {icon} ",
+	"format-icons": ["󱃃", "󰔏", "󱃂"],
+	"on-click": "kitty -e btop"
+},
+
+"cpu": {
+        "format": "{usage}% 󰘚",
+       	"tooltip": true,
+	"interval": 1,
+	"on-click": "kitty -e btop",
+},
+
+"hyprland/workspaces": {
+        "on-click": "activate",  
+	"persistent-workspaces": {
+		"1": [],
+		"2": [],
+		"3": [],
+		"4": [],
+		"5": [],
+		"6": [],
+		},
+         "format": "{icon}",
+         "format-icons": {
+             "urgent": "",
+             "active": "",
+             "default": ""
+		}
+},
+
+"pulseaudio": {
+        "format": " {icon} {volume}%  ",
+        "states": {
+                "normal": 50,
+                "low": 25,
+                "zero": 0
+                },
+        "format-bluetooth": "  {icon} {volume}%  󰂰   ",
+        "format-bluetooth-muted": "  {volume}%  󰝟   ",
+        "format-muted": "  {volume}%  󰝟   ",
+        "format-icons": {
+                "headphone": [" {icon} {volume}%  󰋋   "],
+                "default": ["",
+                         "█",
+                         "██",
+                         "███",
+                         "████",
+                         "█████",
+                         "██████",
+                         "███████",
+                         "████████",
+                         "█████████",
+                         "██████████"],
+        },
+        "on-click": "kitty -e pulsemixer",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +2%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -2%"
+},
+
+"battery": {
+        "states": {
+                "good": 100,
+                "warning": 35,
+                "critical": 15
+                },
+        "format": "{capacity}% {icon} ",
+        "format-charging": " 󰚥 {capacity}% {icon} ",
+        "format-plugged": " 󰚥 {capacity}% {icon} ",
+        "format-alt": "{time} {icon} ",
+        "format-icons": ["",
+                         "█",
+                         "██",
+                         "███",
+                         "████",
+                         "█████",
+                         "██████",
+                         "███████",
+                         "████████",
+                         "█████████",
+                         "██████████"],
+},
+}
+]
