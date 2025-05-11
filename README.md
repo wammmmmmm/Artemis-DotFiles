@@ -18,6 +18,7 @@ Computers have the capacity for love.
 + hyprlock
 + hypridle
 + nnn (try yazi)
++ waybar
 + nemo
 + nchat
 + viu
