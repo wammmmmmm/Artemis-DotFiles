@@ -10,6 +10,8 @@ Computers have the capacity for love.
 
 ## Dependencies 
 
++ Adwaita Dark Amoled Master theme
++ OieIcons
 + Iosevka Nerd Font 
 + mako
 + hyprpaper
