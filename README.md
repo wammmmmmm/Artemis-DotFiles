@@ -12,16 +12,15 @@ Computers have the capacity for love.
 
 + Adwaita Dark Amoled Master theme
 + OieIcons
-+ Iosevka Nerd Font 
++ Iosevka Nerd Font (and all other nerd fonts)
 + mako
 + hyprpaper
 + hyprlock
 + hypridle
 + yazi
 + waybar
-+ nemo
++ whatsie
 + nchat
-+ viu
 + btop
 
 ## Post install tweaks
