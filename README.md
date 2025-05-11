@@ -20,7 +20,6 @@ Computers have the capacity for love.
 + yazi
 + waybar
 + whatsie
-+ nchat
 + btop
 
 ## Post install tweaks
