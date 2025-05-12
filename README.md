@@ -12,7 +12,8 @@ Computers have the capacity for love.
 
 + Adwaita Dark Amoled Master theme
 + OieIcons
-+ Iosevka Nerd Font (and all other nerd fonts)
++ Iosevka Nerd Font
++ otf-font-awesome
 + mako
 + hyprpaper
 + hyprlock
