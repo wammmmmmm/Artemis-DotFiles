@@ -21,6 +21,10 @@ Computers have the capacity for love.
 + waybar
 + whatsie
 + btop
++ bluez
++ bluez-utils
++ bluetui
++ pulsemixer
 
 ## Post install tweaks
 
