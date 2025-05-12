@@ -26,6 +26,7 @@ Computers have the capacity for love.
 + bluetui
 + pulsemixer
 + obsidian
++ sticky-notes
 + GTK settings
 
 ## Post install tweaks
