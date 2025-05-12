@@ -25,6 +25,8 @@ Computers have the capacity for love.
 + bluez-utils
 + bluetui
 + pulsemixer
++ obsidian
++ GTK settings
 
 ## Post install tweaks
 
