@@ -4,6 +4,7 @@
 @define-color red #ff2700;
 @define-color yellow #fffd8c;
 @define-color green #a1ff2e;
+@define-color cyan #14E4FF;
 
 @define-color active @red;
 @define-color alert @yellow;
@@ -18,11 +19,14 @@
 @define-color workspaces-active-color @red;
 @define-color workspaces-urgent-color @yellow;
 
-@define-color waybar-background @nothing;
+@define-color waybar-background @black;
 @define-color top-waybar-border-bottom-color @blue;
 @define-color top-waybar-border-top-color @blue;
 @define-color bottom-waybar-border-top-color @blue;
 @define-color bottom-waybar-border-bottom-color @blue;
+@define-color powerprofilesps @green;
+@define-color powerprofilesperf @cyan;
+@define-color powerprofilesbal @red;
 
 window#waybar.top {
 	background-color: @waybar-background;
@@ -90,4 +94,16 @@ window#waybar.bottom {
 
 #network.disconnected {
 	color: @warning;
+}
+
+#power-profiles-daemon.performance {
+	color: @powerprofilesperf;
+}
+
+#power-profiles-daemon.balanced {
+	color: @powerprofilesbal;
+}
+
+#power-profiles-daemon.power-saver {
+	color: @powerprofilesps;
 }

@@ -1,9 +1,9 @@
 # ~/.config/wofi/config
 
 show = drun
-width = 450
-height = 1000
-location = left
+width = 550
+height = 400
+location = center
 prompt = Aphos
 allow_markup = false
 insensitive = true
