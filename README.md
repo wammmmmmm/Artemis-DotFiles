@@ -4,9 +4,7 @@ Computers have the capacity for love.
 
 # Screenshots
 
-![](Screenshot1.png) 
-
-![](screenshot2.png)
+![](Screenshot1.png)
 
 ## Dependencies 
 
