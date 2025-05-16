@@ -14,6 +14,7 @@ Computers have the capacity for love.
 + Empty butterfly white vr8 Cursor theme
 + otf-font-awesome
 + mako
++ batify
 + hyprpaper
 + hyprlock
 + hypridle
