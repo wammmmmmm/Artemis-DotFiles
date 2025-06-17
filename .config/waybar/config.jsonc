@@ -102,7 +102,7 @@
 "pulseaudio": {
         "format": "{icon} {volume}%",
         "format-bluetooth": "󰂰  {volume}%",
-        "format-bluetooth-muted": "󰂲  {icon}",
+        "format-bluetooth-muted": "󰂲  {volume}%",
         "format-muted": "󰝟  {volume}%",
         "format-icons": {
             "headphone": "󰋋 ",
@@ -176,7 +176,9 @@
         "format": "{status}  󰂯",
         "format-off": "{status}  󰂲 ",
         "on-click": "kitty -e bluetui",
-        "on-click-right": "bluetoothctl show | grep -q 'Powered: yes' && bluetoothctl power off || bluetoothctl power on"
+        "on-click-right": "bluetoothctl show | grep -q 'Powered: yes' && bluetoothctl power off || bluetoothctl power on",
+	"tooltip": true ,
+	"tooltip-format": "{device_alias} {device_battery_percentage}",
 },
 
 "temperature": {
@@ -184,7 +186,8 @@
         "warning-threshold": 70,
         "format": "{icon}  {temperatureC}°C",
         "format-icons": ["󱃃", "󰔏", "󱃂"],
-        "on-click": "kitty -e btop"
+        "on-click": "kitty -e btop",
+	"tooltip": false
 },
 
 "cpu": {
@@ -252,15 +255,14 @@
 
    
 	"modules-left": [
-		 "custom/text2",  "clock",
+
 	], 
 
 	"modules-center": [
-		"hyprland/workspaces"
+		"clock", "hyprland/workspaces", "custom/weather"
 	],
 
 	"modules-right": [
-		"custom/weather", "custom/text3"
 	],
 
 
@@ -274,7 +276,7 @@
 	},
 
 "custom/text3": {
-        "format": "                                                                                                                                                        "
+        "format": "                                                                                                                                                      "
         },
 
 "custom/text": {
@@ -286,34 +288,12 @@
         "exec": "curl 'https://wttr.in/?format=1'",
         "interval": 3600,
         "format": "   {}  ",
-        "tooltip": true
+        "tooltip": false
         },
 
 "clock": {
-        "format": "   {:%H:%M}  󰥔 "
-,
-        "format-alt": "{:%R - %A, %d %B %Y} ",
-        "tooltip-format": "<tt><small>{calendar}</small></tt>",
-        "calendar": {
-                    "mode"          : "year",
-                    "mode-mon-col"  : 3,
-                    "weeks-pos"     : "right",
-                    "on-scroll"     : 1,
-                    "format": {
-                              "months":     "<span color='#ffead3'><b>{}</b></span>",
-                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
-                              }
-                    },
-        "actions":  {
-                    "on-click-right": "mode",
-                    "on-scroll-up": "tz_up",
-                    "on-scroll-down": "tz_down",
-                    "on-scroll-up": "shift_up",
-                    "on-scroll-down": "shift_down"
-                    }
+        "format": "   {:%H:%M}  󰥔    ",
+	"tooltip": false
 },
 
 "tray":{
@@ -361,7 +341,7 @@
 		"3": [],
 		"5": [],
 		},
-         "format": "{icon}",
+         "format": "{icon} ",
          "format-icons": {
              "urgent": "╦",
              "active": "╬",
