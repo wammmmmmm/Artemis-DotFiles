@@ -117,8 +117,8 @@
                 },
         "on-click": "kitty -e pulsemixer",
         "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +2%",
-        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -2%"
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +1%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -1%"
 },
 
 
@@ -158,8 +158,8 @@
 //        "format-icons": {
 //                "default": ["","║","╠╣","╠═╣","╠══╣","╠═══╣","╠════╣"]
 //        },
-        "on-scroll-up": "brightnessctl set +5%",
-        "on-scroll-down": "brightnessctl set 5%-"
+        "on-scroll-up": "brightnessctl set +1%",
+        "on-scroll-down": "brightnessctl set 1%-"
 },
 
 "network": {
@@ -167,8 +167,11 @@
         "format-ethernet": "{bandwidthDownBits}  󰈀 ",
         "format-linked": "Wan  󰈀 ",
         "format-disconnected": "off  󰖪 ",
-        "tooltip-format": "{ifname}: {ipaddr}",
-        "on-click": "kitty -e nmtui"
+	"format-alt":"{status}  󰖪 ",
+	"on-click-right": "sh -c 'if nmcli radio wifi | grep -q \"enabled\"; then nmcli radio wifi off; else nmcli radio wifi on; fi'",
+	"format-off": "off  󰖪 ",
+        "tooltip-format": "{essid}",
+        "on-click": "kitty -e nmtui",
 
 },
 
