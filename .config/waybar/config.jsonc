@@ -100,7 +100,7 @@
 },
 
 "pulseaudio": {
-        "format": "{icon} {volume}%",
+        "format": " {icon} {volume}%",
         "format-bluetooth": "󰂰  {volume}%",
         "format-bluetooth-muted": "󰂲  {volume}%",
         "format-muted": "󰝟  {volume}%",
@@ -176,25 +176,26 @@
 },
 
 "bluetooth": {
-        "format": "{status}  󰂯",
-        "format-off": "{status}  󰂲 ",
+        "format": "{device_battery_percentage}%  󰂯 ",
+	"format-on": "on  󰂯 ",
+        "format-off": "off  󰂲 ",
         "on-click": "kitty -e bluetui",
         "on-click-right": "bluetoothctl show | grep -q 'Powered: yes' && bluetoothctl power off || bluetoothctl power on",
 	"tooltip": true ,
-	"tooltip-format": "{device_alias} {device_battery_percentage}",
+	"tooltip-format": "{device_alias}",
 },
 
 "temperature": {
         "critical-threshold": 80,
         "warning-threshold": 70,
-        "format": "{icon}  {temperatureC}°C",
+        "format": " {icon}  {temperatureC}°C",
         "format-icons": ["󱃃", "󰔏", "󱃂"],
         "on-click": "kitty -e btop",
 	"tooltip": false
 },
 
 "cpu": {
-        "format": "󰘚   {usage}%",
+        "format": " 󰘚   {usage}%",
         "tooltip": true,
         "interval": 1,
         "on-click": "kitty -e btop",
