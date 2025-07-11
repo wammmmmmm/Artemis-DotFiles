@@ -2,7 +2,7 @@
 {
 /////////////////
 /////////////////
-//// GAY BAR ////
+//// TOP BAR ////
 /////////////////
 /////////////////
 
@@ -100,7 +100,7 @@
 },
 
 "pulseaudio": {
-        "format": " {icon} {volume}%",
+        "format": "{icon} {volume}%",
         "format-bluetooth": "󰂰  {volume}%",
         "format-bluetooth-muted": "󰂲  {volume}%",
         "format-muted": "󰝟  {volume}%",
