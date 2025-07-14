@@ -8,7 +8,7 @@ Computers have the capacity for love.
 ![](Screenshot.png)
 
 ### Blue
-![](Screenshot blue.png) 
+![](ScreenshotBlue.png)
 
 ## Dependencies 
 
