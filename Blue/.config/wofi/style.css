@@ -1,0 +1,52 @@
+@define-color orange #ff2700;
+@define-color black #000000;
+@define-color green #6effb9;
+@define-color cyan #14E4FF;
+
+@define-color accent @cyan;
+@define-color background @nothing;
+
+#window {
+margin: 2px;
+border: 0px solid @accent;
+background-color: @background;
+}
+
+#input {
+margin: 5px;
+border: 2px solid @white;
+border-radius: 5px;
+}
+
+#outer-box {
+margin: 0px;
+border: 0px solid @accent;
+background-color: @background;
+}
+
+#scroll {
+margin: 0px;
+border: 0px solid @accent;
+background-color: @background;
+}
+
+#text {
+margin: 0px;
+border: 0px solid @accent;
+}
+
+#inner-box {
+margin: 10px;
+border: 2px solid @black;
+border-radius: 5px;
+background-color: @black;
+padding: 10px;
+opacity: .8;
+}
+
+#entry:selected{
+margin: 0px;
+border: 2px solid @accent;
+border-radius: 0px;
+background-color: @background;
+}
