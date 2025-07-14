@@ -27,7 +27,7 @@
 
 
         "modules-left": [
-        	"hyprland/window"
+        	"hyprland/window",
         ],
 
         "modules-center": [
@@ -35,7 +35,7 @@
         ],
 
         "modules-right": [
-		"tray", "clock",		                
+		"clock",		                
         ],
 
 
@@ -44,7 +44,7 @@
 /////////////
 
 "hyprland/window": {
-    "format": " Arch Linux ",
+    "format": " Arch Linux",
 },
 
 "power-profiles-daemon": {
@@ -153,7 +153,7 @@
 
 "tray": {
         "icon-size": 16,
-        "spacing": 11
+        "spacing": 11,
 },
 
 "backlight": {
@@ -270,7 +270,8 @@
 		"clock", "hyprland/workspaces", "battery"
 	],
 
-	"modules-right": [
+	"modules-right": [ 
+		"tray", "custom/spacing",
 	],
 
 
@@ -278,6 +279,11 @@
 /////////////
 // MODULES //
 /////////////
+
+
+"custom/spacing": {
+        "format": " "
+},
 
 "custom/text2": {
 	"format": "                                                                                                                                                      "

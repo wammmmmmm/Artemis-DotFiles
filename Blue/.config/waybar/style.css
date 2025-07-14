@@ -20,7 +20,6 @@
 @define-color workspaces-active-color @cyan;
 @define-color workspaces-urgent-color @yellow;
 
-@define-color waybar-background @black;
 @define-color top-waybar-border-bottom-color @blue;
 @define-color top-waybar-border-top-color @blue;
 @define-color bottom-waybar-border-top-color @blue;
