@@ -4,7 +4,11 @@ Computers have the capacity for love.
 
 # Screenshots
 
+### Orange
 ![](Screenshot.png)
+
+### Blue
+![](Screenshot Blue.png) 
 
 ## Dependencies 
 
