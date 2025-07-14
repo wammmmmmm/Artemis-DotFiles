@@ -27,7 +27,7 @@
 
 
         "modules-left": [
-        	"hyprland/window",
+        	"hyprland/window", "custom/weather",
         ],
 
         "modules-center": [
@@ -42,6 +42,10 @@
 /////////////
 // MODULES //
 /////////////
+
+"custom/spacing": {
+        "format": " "
+},
 
 "hyprland/window": {
     "format": " Arch Linux",
