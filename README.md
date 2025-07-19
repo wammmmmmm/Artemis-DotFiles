@@ -15,6 +15,7 @@ Computers have the capacity for love.
 + Adwaita Dark Amoled Master theme
 + OieIcons
 + Iosevka Nerd Font
++ ttf-joypixels
 + Empty butterfly white vr8 Cursor theme
 + otf-font-awesome
 + mako
