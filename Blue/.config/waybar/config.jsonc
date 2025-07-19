@@ -27,11 +27,11 @@
 
 
         "modules-left": [
-        	"hyprland/window", "custom/weather",
+        	"custom/spacing","custom/Aphos", "custom/weather",
         ],
 
         "modules-center": [
-                "backlight", "bluetooth", "network", "power-profiles-daemon",  "temperature", "cpu", "pulseaudio"
+                "custom/spacing", "backlight", "bluetooth", "network", "power-profiles-daemon",  "temperature", "cpu", "pulseaudio"
         ],
 
         "modules-right": [
@@ -43,12 +43,12 @@
 // MODULES //
 /////////////
 
-"custom/spacing": {
-        "format": " "
+"custom/Aphos": {
+	"format": "Aphos"
 },
 
-"hyprland/window": {
-    "format": " Arch Linux",
+"custom/spacing": {
+        "format": " "
 },
 
 "power-profiles-daemon": {
@@ -56,34 +56,23 @@
   "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
   "tooltip": true,
   "format-icons": {
-    "default": "═╣ AR73M1S ╠═",
-    "performance": "═╣ AR73M1S ╠═",
-    "balanced": "═╣ AR73M1S ╠═",
-    "power-saver": "═╣ AR73M1S ╠═"
+    "performance": ">>> ART3M1S⌥",
+    "balanced": ">> ART3M1S⌥",
+    "power-saver": "> ART3M1S⌥"
   }
 },
 
-"custom/text": {
-	"format": "═╣ AR73M1S ╠═",
-	"on-click": "exec firefox https://aaaaaaafif.neocities.org/",
-	},
-
-"custom/text2": {
-	"format": "═══════════╬"},
-
-"custom/text3": {
-        "format": "╬═══════════"},
-
 "custom/weather": {
-        "exec": "curl 'https://wttr.in/?format=1'",
+        "exec": "curl 'https://v2.wttr.in/?format=1'",
         "interval": 3600,
         "format": "{}",
-        "tooltip": true
+        "tooltip": false,
+	"tooltip-format": "{}",	
 	},
 
 "clock": {
-        "format": " {:%A, %B %d, %Y} ",
-        "format-alt": " {:%A, %B %d, %Y} ",
+        "format": " {:%a, %B %d, %Y} ",
+        "format-alt": " {:%a, %B %d, %Y} ",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
                     "mode"          : "year",
@@ -91,11 +80,11 @@
                     "weeks-pos"     : "right",
                     "on-scroll"     : 1,
                     "format": {
-                              "months":     "<span color='#ffead3'><b>{}</b></span>",
-                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              "months":     "<span color='#ffffff'><b>{}</b></span>",
+                              "days":       "<span color='#ffffff'><b>{}</b></span>",
+                              "weeks":      "<span color='#a1ff2e'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#00f7ff'><b>{}</b></span>",
+                              "today":      "<span color='#f50538'><b><u>{}</u></b></span>"
                               }
                     },
         "actions":  {
@@ -129,32 +118,6 @@
         "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -1%"
 },
 
-
-"battery": {
-        "states": {
-                "good": 100,
-                "warning": 35,
-                "critical": 15
-                },
-        "format": "{icon} {capacity}% ",
-        "format-charging": "󰚥  {icon} {capacity}% ",
-        "format-plugged": "󰚥  {icon} {capacity}% ",
-//        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-        "format-icons": {
-	     "default": ["══════════",
-                         "═════════╣",
-                         "════════╬═",
-                         "═══════╬══",
-                         "══════╬═══",
-                         "═════╬════",
-                         "════╬═════",
-                         "═══╬══════",
-                         "══╬═══════",
-                         "═╬════════",
-                         "╠═════════"],
-        },
-},
-
 "tray": {
         "icon-size": 16,
         "spacing": 11,
@@ -163,9 +126,6 @@
 "backlight": {
         "format": "{percent}% {icon}",
         "format-icons": ["󰃞 ", "󰃟 ", "󰃠 "],
-//        "format-icons": {
-//                "default": ["","║","╠╣","╠═╣","╠══╣","╠═══╣","╠════╣"]
-//        },
         "on-scroll-up": "brightnessctl set +1%",
         "on-scroll-down": "brightnessctl set 1%-"
 },
@@ -208,15 +168,6 @@
         "interval": 1,
         "on-click": "kitty -e btop",
 },
-
-"custom/waybar-media": {
-        "return-type": "json",
-        "exec": "waybar-media.py status",
-        "on-click": "waybar-media.py playpause",
-        "on-scroll-up": "waybar-media.py previous",
-        "on-scroll-down": "waybar-media.py next",
-        "escape": true
-    },
 
 "hyprland/workspaces": {
         "on-click": "activate",  
@@ -289,14 +240,6 @@
         "format": " "
 },
 
-"custom/text2": {
-	"format": "                                                                                                                                                      "
-	},
-
-"custom/text3": {
-        "format": "                                                                                                                                                      "
-        },
-
 "custom/text": {
         "format": "[ AR73M1S ]",
         "on-click": "exec firefox https://aaaaaaafif.neocities.org/",
@@ -359,62 +302,12 @@
 		"3": [],
 		"5": [],
 		},
-         "format": "{icon} ",
+         "format": " {icon} ",
          "format-icons": {
-             "urgent": "╦",
-             "active": "╬",
-             "default": "󠁯󠁯󠁯═",
+             "urgent": "○",
+             "active": "●",
+             "default": "󠁯󠁯󠁯◌",
 		}
-},
-
-"pulseaudio": {
-        "format": "  {volume}%  {icon} ",
-        "states": {
-                "normal": 50,
-                "low": 25,
-                "zero": 0
-                },
-        "format-bluetooth": "  {volume}%  {icon}  󰂰 ",
-        "format-bluetooth-muted": "  {volume}%  {icon}  󰝟 ",
-        "format-muted": "  {volume}%  {icon}  󰝟 ",
-        "format-icons": {
-                "headphone": ["  {volume}  {icon}%  󰋋 "],
-                "default": ["══════════",
-                         "╠═════════",
-                         "═╬════════",
-                         "══╬═══════",
-                         "═══╬══════",
-                         "════╬═════",
-                         "═════╬════",
-                         "══════╬═══",
-                         "═══════╬══",
-                         "════════╬═",
-                         "═════════╣"],
-        },
-        "on-click": "kitty -e pulsemixer",
-        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +2%",
-        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -2%"
-},
-
-"backlight": {
-        "format": "{percent}% {icon}",
-//        "format-icons": ["󰃞 ", "󰃟 ", "󰃠 "],
-        "format-icons": {
-		"default": ["",
-                         "║",
-                         "╠╣",
-                         "╠═╣",
-                         "╠══╣",
-                         "╠═══╣",
-                         "╠════╣",
-                         "╠═════╣",
-                         "╠══════╣",
-                         "╠═══════╣",
-                         "╠════════╣"],
-        },
-        "on-scroll-up": "brightnessctl set +5%",
-        "on-scroll-down": "brightnessctl set 5%-"
 },
 
 "battery": {

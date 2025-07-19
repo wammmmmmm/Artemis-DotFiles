@@ -24,7 +24,7 @@
 @define-color top-waybar-border-top-color @blue;
 @define-color bottom-waybar-border-top-color @blue;
 @define-color bottom-waybar-border-bottom-color @blue;
-@define-color powerprofilesps @yellow;
+@define-color powerprofilesps @green;
 @define-color powerprofilesperf @red;
 @define-color powerprofilesbal @cyan;
 
@@ -53,6 +53,10 @@ window#waybar.bottom {
 #custom-text {
 	font-size: 16px;
 	color: @custom-text-color;
+}
+
+#custom-weather { 
+	font-family: TT Squares;
 }
 
 #battery.warning:not(.charging) {
@@ -98,12 +102,15 @@ window#waybar.bottom {
 
 #power-profiles-daemon.performance {
 	color: @powerprofilesperf;
+	font-size: 15px;
 }
 
 #power-profiles-daemon.balanced {
 	color: @powerprofilesbal;
+	font-size: 15px;
 }
 
 #power-profiles-daemon.power-saver {
 	color: @powerprofilesps;
+	font-size: 15px;
 }
