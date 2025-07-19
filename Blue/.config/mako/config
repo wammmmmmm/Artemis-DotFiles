@@ -5,9 +5,11 @@
 font=TT Squares
 format=<b>%a ⏵</b> %s\n%b
 sort=-time
+icons=1
 layer=overlay
 anchor=top-center
-background-color=#00000080
+background-color=#00000000
+progress-color=#000000
 width=300
 height=110
 padding=0,5,10

@@ -165,7 +165,7 @@
 "cpu": {
         "format": " 󰘚   {usage}%",
         "tooltip": true,
-        "interval": 1,
+        "interval": 5,
         "on-click": "kitty -e btop",
 },
 
@@ -289,7 +289,7 @@
 "cpu": {
         "format": "{usage}% 󰘚",
        	"tooltip": true,
-	"interval": 1,
+	"interval": 5,
 	"on-click": "kitty -e btop",
 },
 
@@ -304,9 +304,9 @@
 		},
          "format": " {icon} ",
          "format-icons": {
-             "urgent": "○",
-             "active": "●",
-             "default": "󠁯󠁯󠁯◌",
+             "urgent": "⦿",
+             "active": "➕",
+             "default": "󠁯󠁯󠁯∙",
 		}
 },
 
@@ -319,7 +319,8 @@
         "format": "   {icon}   {capacity}%     ",
         "format-charging": "   󰂄   {capacity}%     ",
         "format-plugged": "   󰚥   {capacity}%     ",
-        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+	"interval": 5
     },
 }
 ]
