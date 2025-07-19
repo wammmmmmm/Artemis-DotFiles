@@ -1,4 +1,4 @@
-# AR73M1S dots 
+# AR73M1S dots (for acer phn1672)
 
 Computers have the capacity for love.
 
