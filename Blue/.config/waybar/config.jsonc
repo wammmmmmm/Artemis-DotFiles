@@ -56,9 +56,9 @@
   "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
   "tooltip": true,
   "format-icons": {
-    "performance": ">>> ART3M1S⌥",
-    "balanced": ">> ART3M1S⌥",
-    "power-saver": "> ART3M1S⌥"
+    "performance": ">>>ART3M1S⌥",
+    "balanced": ">>ART3M1S⌥",
+    "power-saver": ">ART3M1S⌥"
   }
 },
 
@@ -154,8 +154,8 @@
 },
 
 "temperature": {
-        "critical-threshold": 80,
-        "warning-threshold": 70,
+        "critical-threshold": 75,
+        "warning-threshold": 65,
         "format": " {icon}  {temperatureC}°C",
         "format-icons": ["󱃃", "󰔏", "󱃂"],
         "on-click": "kitty -e btop",
@@ -304,8 +304,9 @@
 		},
          "format": " {icon} ",
          "format-icons": {
-             "urgent": "⦿",
-             "active": "➕",
+             "urgent": "⦾",
+             "active": "⦿",
+// ➕
              "default": "󠁯󠁯󠁯∙",
 		}
 },
